@@ -17,8 +17,8 @@ router.get('/notifications', function(req, res, next) {
 
     var notificationList = body.slice(0);
     notificationList.sort(function(a,b) {
-        var x = a.usuario.toLowerCase();
-        var y = b.usuario.toLowerCase();
+        var x = a.usuario;
+        var y = b.usuario;
         return x > y ? 1 : x < y ? -1 : 0;
     });
 
